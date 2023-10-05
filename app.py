@@ -28,11 +28,11 @@ FlaskJSON(app)
 #g is flask for a global var storage 
 def init_new_env():
     #To connect to DB
-    #if 'db' not in g:
-    #    g.db = get_db()
+    if 'db' not in g:
+        g.db = get_db()
 
-    g.secrets = get_secrets()
-    g.sms_client = get_sms_client()
+    #g.secrets = get_secrets()
+    #g.sms_client = get_sms_client()
 
 #This gets executed by default by the browser if no page is specified
 #So.. we redirect to the endpoint we want to load the base page
